@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Skapiec")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0973d9fac40ecbef807289b14fd6c2763d7e901c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Skapiec")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Skapiec")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
