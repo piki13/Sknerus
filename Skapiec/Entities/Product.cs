@@ -1,5 +1,8 @@
-﻿namespace Skapiec.Entities
+﻿using Microsoft.EntityFrameworkCore;
+
+namespace Skapiec.Entities
 {
+    [Keyless]
     public class Product
     {
         public string name { get; set; }

@@ -7,28 +7,14 @@ using Skapiec.Entities;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+builder.Services.AddControllersWithViews();
 
-/*builder.Services.AddDbContext<SkapiecDBcontext>(option =>
-    option.UseSqlServer(builder.Configuration.GetConnectionString("SkapiecDbConnectionString"))
-    );*/
+//Conneting entity do DB
+builder.Services.AddDbContext<SkapiecDBcontext>(option =>
+    option.UseSqlServer(builder.Configuration.GetConnectionString("Skapiec"))
+    );
 
-using (var context = new SkapiecDBcontext())
-{
-    //creates db if not exists 
-    context.Database.EnsureCreated();
 
-    var product = new Product()
-    {
-        name = "Test",
-        value = 2137,
-        link = "www.google.com"
-    };
-
-    context.Products.Add(product);
-    context.SaveChanges();
-
-}
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -46,10 +32,12 @@ app.UseRouting();
 
 app.UseAuthorization();
 
-app.MapRazorPages();
+//app.MapRazorPages();
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
+
 app.Run();
 
-
-
-//Server=localhost\SQLEXPRESS;Database=master;Trusted_Connection=True;
 //https://www.youtube.com/watch?v=720CURaATNg
+//https://www.youtube.com/watch?v=_uSw8sh7xKs
