@@ -136,3 +136,4 @@ C:\Users\prey52\source\repos\Skapiec\Skapiec\obj\Debug\net8.0\refint\Skapiec.dll
 C:\Users\prey52\source\repos\Skapiec\Skapiec\obj\Debug\net8.0\Skapiec.pdb
 C:\Users\prey52\source\repos\Skapiec\Skapiec\obj\Debug\net8.0\Skapiec.genruntimeconfig.cache
 C:\Users\prey52\source\repos\Skapiec\Skapiec\obj\Debug\net8.0\ref\Skapiec.dll
+C:\Users\prey52\source\repos\Skapiec\Skapiec\bin\Debug\net8.0\HtmlAgilityPack.CssSelectors.dll

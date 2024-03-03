@@ -1,0 +1,14 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model Skapiec.Models.SearchViewModel
+
+<h1>Wyszukaj najtańsze produkty</h1>
+
+<form method="post">
+    <input type="text" class="form-control" placeholder="Rower MTB" asp-for="name" />
+    <button type="submit" class="btn btn-primary">Znajdź</button>
+</form>
