@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Query;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Options;
 using Skapiec.Entities;
+using Skapiec.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<SkapiecDBcontext>(option =>
     option.UseSqlServer(builder.Configuration.GetConnectionString("Skapiec"))
     );
-
+//services
+builder.Services.AddScoped<ScraperService>();
 
 var app = builder.Build();
 

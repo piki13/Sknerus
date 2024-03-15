@@ -6,9 +6,11 @@ namespace Skapiec.Entities
     //[Keyless]
     public class Product
     {
-        public string name { get; set; }
-        public double value { get; set; }
+        public string Name { get; set; }
+        public double Value { get; set; }
         [Key]
-        public string link { get; set; }
+        public string Link { get; set; }
+        public string ImgUrl {  get; set; } 
+        public DateTime CreationTime {  get; set; }
     }
 }
