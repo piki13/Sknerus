@@ -24,13 +24,20 @@ namespace Skapiec.Migrations
 
             modelBuilder.Entity("Skapiec.Entities.Product", b =>
                 {
-                    b.Property<string>("Link")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<DateTime>("CreationTime")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImgUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -41,7 +48,7 @@ namespace Skapiec.Migrations
                     b.Property<double>("Value")
                         .HasColumnType("float");
 
-                    b.HasKey("Link");
+                    b.HasKey("Id");
 
                     b.ToTable("Products");
                 });
