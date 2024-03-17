@@ -66,6 +66,8 @@ namespace Skapiec.Services
 
                 var products = htmlDocument.DocumentNode.SelectSingleNode("/html/body/div/main/div[2]/div[3]");
 
+                var productsFromDb = await dBcontext.Products.ToListAsync();
+
                 for (int i = 1; i <= 20; i++)
                 {
                     var processedProduct = products.SelectSingleNode("div[" + i + "]");
@@ -73,6 +75,7 @@ namespace Skapiec.Services
                     var processedProductPrice = processedProduct.SelectSingleNode("div/div/div[3]/span[1]").InnerText;
                     var processeProductLink = processedProduct.SelectSingleNode("div/a").Attributes["href"].Value;
                     var processedImgUrl = processedProduct.SelectSingleNode("div/div/div/div/img").Attributes["src"].Value;
+                    var querytoprocess = viewModel.Name;
 
 
                     char[] totrim = { 'z', 'ł' };
@@ -80,20 +83,32 @@ namespace Skapiec.Services
                     double converterdprice = Convert.ToDouble(processedProductPrice.Trim(totrim));
                     Console.WriteLine(processedImgUrl + " ");
                     Console.WriteLine(converterdprice + "\n");
-                    var product = new Product
-                    {
-                        Name = porcessedProductName,
-                        Value = converterdprice,
-                        Link = processeProductLink,
-                        ImgUrl = processedImgUrl,
-                        CreationTime = DateTime.Now
-                    };
 
-                    await dBcontext.Products.AddAsync(product);
-                    await dBcontext.SaveChangesAsync();
+                    foreach (var pro in productsFromDb)
+                    {
+                        if (pro.Name == porcessedProductName)
+                        {
+                            dBcontext.Products.Remove(pro);
+                        }
+                    }
+                
+                        var product = new Product
+                        {
+                            Name = porcessedProductName,
+                            Value = converterdprice,
+                            Link = processeProductLink,
+                            ImgUrl = processedImgUrl,
+                            CreationTime = DateTime.Now,
+                            query = querytoprocess
+                        };
+
+                        await dBcontext.Products.AddAsync(product);
+                        await dBcontext.SaveChangesAsync();
+                    
+                    
                 }
             }
-            return View();
+            return View("~/Views/Home/Index.cshtml");
         }
     }
 }

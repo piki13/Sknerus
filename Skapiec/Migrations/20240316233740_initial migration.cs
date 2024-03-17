@@ -21,7 +21,8 @@ namespace Skapiec.Migrations
                     Value = table.Column<double>(type: "float", nullable: false),
                     Link = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ImgUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    CreationTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    query = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

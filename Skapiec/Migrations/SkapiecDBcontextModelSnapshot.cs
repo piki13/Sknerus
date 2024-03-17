@@ -48,6 +48,10 @@ namespace Skapiec.Migrations
                     b.Property<double>("Value")
                         .HasColumnType("float");
 
+                    b.Property<string>("query")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Products");

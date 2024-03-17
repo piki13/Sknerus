@@ -15,5 +15,6 @@ namespace Skapiec.Entities
         public string Link { get; set; }
         public string ImgUrl {  get; set; } 
         public DateTime CreationTime {  get; set; }
+        public string query { get; set; }
     }
 }

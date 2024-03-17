@@ -12,7 +12,7 @@ using Skapiec.Entities;
 namespace Skapiec.Migrations
 {
     [DbContext(typeof(SkapiecDBcontext))]
-    [Migration("20240315155022_initial migration")]
+    [Migration("20240316233740_initial migration")]
     partial class initialmigration
     {
         /// <inheritdoc />
@@ -50,6 +50,10 @@ namespace Skapiec.Migrations
 
                     b.Property<double>("Value")
                         .HasColumnType("float");
+
+                    b.Property<string>("query")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
