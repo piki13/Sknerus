@@ -5,9 +5,9 @@
     ViewData["Title"] = "Query Results";
 }
 
-<h1>Query Results</h1>
+<h1>Historia</h1>
 
-<form method="post" asp-action="ShowResults">
+<form method="post" asp-action="Index">
     <div class="form-group">
         <label for="queryColumn">Wybierz wyszukiwanie z listy:</label>
         <select class="form-control" id="queryColumn" name="queryColumn">
@@ -23,7 +23,9 @@
                 }
             }
         </select>
-        @if (ViewBag.Products != null && ViewBag.Products.Count > 0)
+        <!--
+            -----------------------
+            @if (ViewBag.Products != null && ViewBag.Products.Count > 0)
         {
             var firstProductWithDate = ViewBag.Products[0];
             if (firstProductWithDate != null)
@@ -32,12 +34,21 @@
                 <label class="form-label">Creation Time: @formattedDate</label>
             }
         }
+        ------------------------
+        -->
     </div>
     <button type="submit" class="btn btn-primary">Show Results</button>
 </form>
 
 @if (Model != null && Model.Any())
 {
+    var firstProductWithDate = ViewBag.Products[0];
+    if (firstProductWithDate != null)
+    {
+        var formattedDate = firstProductWithDate.CreationTime.ToString("yyyy-MM-dd HH:mm");
+        <label class="form-label">Creation Time: @formattedDate</label>
+    }
+    <!-- Przeniosłem to z góry -->
     <table class="table">
         <thead>
             <tr>
@@ -60,7 +71,12 @@
         </tbody>
     </table>
 }
+<!--
 else
 {
     <p>No results found.</p>
 }
+Dałem do komentarza bo wyświetlało się przy pierwszym odpaleniu strony
+Poza tym scraper jest niezabezpieczony przez nullem, więc nie jest
+możliwe dodanie querty które nie ma wyników
+-->
