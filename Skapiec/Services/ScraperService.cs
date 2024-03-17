@@ -108,7 +108,13 @@ namespace Skapiec.Services
                     
                 }
             }
-            return View("~/Views/Home/Index.cshtml");
+
+            var resultsFromDb = await dBcontext.Products
+                .Where(p => p.query == viewModel.Name)
+                .ToListAsync();
+            ViewBag.Products = resultsFromDb;
+
+            return View();
         }
     }
 }

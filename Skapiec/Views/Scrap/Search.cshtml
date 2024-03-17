@@ -12,3 +12,29 @@
     <input type="text" class="form-control" placeholder="Chcę znaleźć:" asp-for="Name" />
     <button type="submit" class="btn btn-primary">Znajdź</button>
 </form>
+
+@if (ViewBag.Products != null)
+{
+    <h2>Znalezione produkty:</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Obrazek</th>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in ViewBag.Products)
+            {
+                <tr>
+                    <td><img src="@product.ImgUrl" alt="Product Image" style="width:100px;height:100px;"></td>
+                    <td>@product.Name</td>
+                    <td>@product.Value</td>
+                    <td><a href="@product.Link">Link</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
