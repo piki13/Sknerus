@@ -1,8 +1,66 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+@model IEnumerable<Skapiec.Entities.Product>
+
+@{
+    ViewData["Title"] = "Query Results";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>Query Results</h1>
+
+<form method="post" asp-action="ShowResults">
+    <div class="form-group">
+        <label for="queryColumn">Wybierz wyszukiwanie z listy:</label>
+        <select class="form-control" id="queryColumn" name="queryColumn">
+            @{
+                var selectedQueries = new List<string>();
+                foreach (var product in ViewBag.Products)
+                {
+                    if (!selectedQueries.Contains(product.query))
+                    {
+                        <option value="@product.query">@product.query</option>
+                        selectedQueries.Add(product.query);
+                    }
+                }
+            }
+        </select>
+        @if (ViewBag.Products != null && ViewBag.Products.Count > 0)
+        {
+            var firstProductWithDate = ViewBag.Products[0];
+            if (firstProductWithDate != null)
+            {
+                var formattedDate = firstProductWithDate.CreationTime.ToString("yyyy-MM-dd HH:mm");
+                <label class="form-label">Creation Time: @formattedDate</label>
+            }
+        }
+    </div>
+    <button type="submit" class="btn btn-primary">Show Results</button>
+</form>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Obrazek</th>
+                <th>Nazwa</th>
+                <th>Cena</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td><img src="@product.ImgUrl" alt="Product Image" style="width:100px;height:100px;"></td>
+                    <td>@product.Name</td>
+                    <td>@product.Value</td>
+                    <td><a href="@product.Link">Link</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No results found.</p>
+}
