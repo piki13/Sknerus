@@ -17,25 +17,35 @@ namespace Skapiec.Controllers
             _logger = logger;
         }
 
+
+
+        [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var productsFromDb = await dBcontext.Products.ToListAsync();
-            ViewBag.Products = productsFromDb;
+            var AllproductsFromDb = await dBcontext.Products.ToListAsync();
+
+            ViewBag.Products = AllproductsFromDb;
             return View(); // Przekieruj do widoku QueryResults.cshtml
         }
-        public async Task<IActionResult> ShowResults(string queryColumn)
+
+
+        [HttpPost]
+        public async Task<IActionResult> Index(string queryColumn)
         {
+            var AllproductsFromDb = await dBcontext.Products.ToListAsync();
             var productsFromDb = await dBcontext.Products
                                                 .Where(p => p.query == queryColumn)
                                                 .ToListAsync();
-            ViewBag.Products = productsFromDb;
+
+            //var productsFromDb = await dBcontext.Products.ToListAsync();
+
+            ViewBag.Products = AllproductsFromDb;
+            ViewBag.Selected = productsFromDb;
             return View("Index", productsFromDb); // Przekieruj do widoku Index.cshtml z wynikami zapytania
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
+
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
