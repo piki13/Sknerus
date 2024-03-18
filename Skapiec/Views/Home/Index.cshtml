@@ -1,16 +1,15 @@
-﻿
-@model IEnumerable<Skapiec.Entities.Product>
+﻿@model IEnumerable<Skapiec.Entities.Product>
 
 @{
-    ViewData["Title"] = "Query Results";
+    ViewData["Title"] = "Historia";
 }
 
 <h1>Historia</h1>
 
-<form method="post" asp-action="Index">
+<form method="post" asp-action="Index" id="searchForm">
     <div class="form-group">
         <label for="queryColumn">Wybierz wyszukiwanie z listy:</label>
-        <select class="form-control" id="queryColumn" name="queryColumn">
+        <select class="form-control" id="queryColumn" name="queryColumn" onchange="document.getElementById('searchForm').submit()">
             @{
                 var selectedQueries = new List<string>();
                 foreach (var product in ViewBag.Products)
@@ -23,32 +22,23 @@
                 }
             }
         </select>
-        <!--
-            -----------------------
-            @if (ViewBag.Products != null && ViewBag.Products.Count > 0)
-        {
-            var firstProductWithDate = ViewBag.Products[0];
-            if (firstProductWithDate != null)
-            {
-                var formattedDate = firstProductWithDate.CreationTime.ToString("yyyy-MM-dd HH:mm");
-                <label class="form-label">Creation Time: @formattedDate</label>
-            }
-        }
-        ------------------------
-        -->
     </div>
-    <button type="submit" class="btn btn-primary">Show Results</button>
+    <div class="form-group">
+        <label for="sortOrder">Sortowanie:</label>
+        <select class="form-control" id="sortOrder" name="sortOrder" onchange="document.getElementById('searchForm').submit()">
+            <option value="NameAsc">Nazwa (rosnąco)</option>
+            <option value="NameDesc">Nazwa (malejąco)</option>
+            <option value="PriceAsc">Cena (rosnąco)</option>
+            <option value="PriceDesc">Cena (malejąco)</option>
+            <option value="DateAsc">Data (rosnąco)</option>
+            <option value="DateDesc">Data (malejąco)</option>
+            <!-- Dodaj więcej opcji sortowania według potrzeb -->
+        </select>
+    </div>
 </form>
 
 @if (Model != null && Model.Any())
 {
-    var firstProductWithDate = ViewBag.Products[0];
-    if (firstProductWithDate != null)
-    {
-        var formattedDate = firstProductWithDate.CreationTime.ToString("yyyy-MM-dd HH:mm");
-        <label class="form-label">Creation Time: @formattedDate</label>
-    }
-    <!-- Przeniosłem to z góry -->
     <table class="table">
         <thead>
             <tr>
@@ -56,6 +46,9 @@
                 <th>Nazwa</th>
                 <th>Cena</th>
                 <th>Link</th>
+                <th>
+                    Data
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -66,17 +59,9 @@
                     <td>@product.Name</td>
                     <td>@product.Value</td>
                     <td><a href="@product.Link">Link</a></td>
+                    <td>@product.CreationTime.ToString("yyyy-MM-dd HH:mm")</td>
                 </tr>
             }
         </tbody>
     </table>
 }
-<!--
-else
-{
-    <p>No results found.</p>
-}
-Dałem do komentarza bo wyświetlało się przy pierwszym odpaleniu strony
-Poza tym scraper jest niezabezpieczony przez nullem, więc nie jest
-możliwe dodanie querty które nie ma wyników
--->
