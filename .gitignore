@@ -34,3 +34,5 @@
 /.vs/Skapiec/v17/DocumentLayout.json
 /.vs/Skapiec/v17/HierarchyCache.v1.txt
 /.vs/VSWorkspaceState.json
+/Skapiec/obj/Debug/net8.0/project.razor.vs.bin
+/Skapiec/Views/Shared/GenerateTablePARTIAL.cshtml
