@@ -166,3 +166,4 @@ C:\Users\Tomek\source\repos\Sknerus\Testowy\bin\Debug\net8.0\xunit.abstractions.
 C:\Users\Tomek\source\repos\Sknerus\Testowy\bin\Debug\net8.0\xunit.assert.dll
 C:\Users\Tomek\source\repos\Sknerus\Testowy\bin\Debug\net8.0\xunit.core.dll
 C:\Users\Tomek\source\repos\Sknerus\Testowy\bin\Debug\net8.0\xunit.execution.dotnet.dll
+C:\Users\Tomek\source\repos\Sknerus\Testowy\bin\Debug\net8.0\Test.html

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7B24FB3B-0D98-4243-932D-D18AD756F174}|Testowy\\Testowy.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\testowy\\scrapperservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B24FB3B-0D98-4243-932D-D18AD756F174}|Testowy\\Testowy.csproj|solutionrelative:testowy\\scrapperservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7B24FB3B-0D98-4243-932D-D18AD756F174}|Testowy\\Testowy.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\testowy\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7B24FB3B-0D98-4243-932D-D18AD756F174}|Testowy\\Testowy.csproj|solutionrelative:testowy\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,12 +15,16 @@
       "RelativeMoniker": "D:0:0:{7B24FB3B-0D98-4243-932D-D18AD756F174}|Testowy\\Testowy.csproj|solutionrelative:testowy\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|solutionrelative:skapiec\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\services\\scraperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|solutionrelative:skapiec\\services\\scraperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\controllers\\scrapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|solutionrelative:skapiec\\controllers\\scrapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7B24FB3B-0D98-4243-932D-D18AD756F174}|Testowy\\Testowy.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\testowy\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7B24FB3B-0D98-4243-932D-D18AD756F174}|Testowy\\Testowy.csproj|solutionrelative:testowy\\test.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\models\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|solutionrelative:skapiec\\models\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -25,14 +33,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\entities\\skapiecdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|solutionrelative:skapiec\\entities\\skapiecdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\services\\scraperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|solutionrelative:skapiec\\services\\scraperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\models\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|solutionrelative:skapiec\\models\\searchviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74098C84-4452-4C04-B698-DDC9C0419EFB}|Skapiec\\Skapiec.csproj|c:\\users\\tomek\\source\\repos\\sknerus\\skapiec\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -108,7 +108,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -128,20 +128,44 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\Class1.cs",
               "RelativeDocumentMoniker": "Testowy\\Class1.cs",
               "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\Class1.cs",
               "RelativeToolTip": "Testowy\\Class1.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAC4AAAANAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T17:16:37.823Z",
+              "WhenOpened": "2024-04-04T12:32:11.302Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Test.html",
+              "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\Test.html",
+              "RelativeDocumentMoniker": "Testowy\\Test.html",
+              "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\Test.html",
+              "RelativeToolTip": "Testowy\\Test.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-04-02T17:26:56.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ScrapperServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\ScrapperServiceTest.cs",
+              "RelativeDocumentMoniker": "Testowy\\ScrapperServiceTest.cs",
+              "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\ScrapperServiceTest.cs",
+              "RelativeToolTip": "Testowy\\ScrapperServiceTest.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAcwC8AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T16:59:28.726Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\UnitTest1.cs",
               "RelativeDocumentMoniker": "Testowy\\UnitTest1.cs",
@@ -149,25 +173,11 @@
               "RelativeToolTip": "Testowy\\UnitTest1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB8AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-18T16:14:57.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-18T16:14:57.032Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "SkapiecDBcontext.cs",
-              "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Entities\\SkapiecDBcontext.cs",
-              "RelativeDocumentMoniker": "Skapiec\\Entities\\SkapiecDBcontext.cs",
-              "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Entities\\SkapiecDBcontext.cs",
-              "RelativeToolTip": "Skapiec\\Entities\\SkapiecDBcontext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T14:09:32.43Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "SearchViewModel.cs",
               "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Models\\SearchViewModel.cs",
               "RelativeDocumentMoniker": "Skapiec\\Models\\SearchViewModel.cs",
@@ -175,8 +185,19 @@
               "RelativeToolTip": "Skapiec\\Models\\SearchViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T19:12:28.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T19:12:28.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SkapiecDBcontext.cs",
+              "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Entities\\SkapiecDBcontext.cs",
+              "RelativeDocumentMoniker": "Skapiec\\Entities\\SkapiecDBcontext.cs",
+              "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Entities\\SkapiecDBcontext.cs",
+              "RelativeToolTip": "Skapiec\\Entities\\SkapiecDBcontext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-09T14:09:32.43Z"
             },
             {
               "$type": "Document",
@@ -188,34 +209,7 @@
               "RelativeToolTip": "Skapiec\\Models\\ErrorViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T19:12:32.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ScrapController.cs",
-              "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Controllers\\ScrapController.cs",
-              "RelativeDocumentMoniker": "Skapiec\\Controllers\\ScrapController.cs",
-              "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Controllers\\ScrapController.cs",
-              "RelativeToolTip": "Skapiec\\Controllers\\ScrapController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-02T18:46:49.529Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Skapiec\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Skapiec\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAuwCIAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T20:02:15.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T19:12:32.757Z"
             },
             {
               "$type": "Document",
@@ -227,25 +221,23 @@
               "RelativeToolTip": "Skapiec\\Migrations\\20240316233740_initial migration.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAIBJwCMAAAAnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T02:27:13.252Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T02:27:13.252Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "ScraperService.cs",
               "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Services\\ScraperService.cs",
               "RelativeDocumentMoniker": "Skapiec\\Services\\ScraperService.cs",
               "ToolTip": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Services\\ScraperService.cs",
               "RelativeToolTip": "Skapiec\\Services\\ScraperService.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAowEQAAABMAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABYAAABNAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T21:50:33.228Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T21:50:33.228Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Entities\\Product.cs",
               "RelativeDocumentMoniker": "Skapiec\\Entities\\Product.cs",
@@ -253,8 +245,7 @@
               "RelativeToolTip": "Skapiec\\Entities\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-09T14:09:47.299Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-09T14:09:47.299Z"
             },
             {
               "$type": "Document",
@@ -266,8 +257,7 @@
               "RelativeToolTip": "Skapiec\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T22:10:37.077Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T22:10:37.077Z"
             },
             {
               "$type": "Document",
@@ -279,8 +269,7 @@
               "RelativeToolTip": "Skapiec\\Services\\DbConnectionService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T21:04:32.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T21:04:32.573Z"
             },
             {
               "$type": "Document",
@@ -292,8 +281,7 @@
               "RelativeToolTip": "Skapiec\\Migrations\\SkapiecDBcontextModelSnapshot.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T02:28:49.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T02:28:49.821Z"
             },
             {
               "$type": "Document",
@@ -305,8 +293,7 @@
               "RelativeToolTip": "Skapiec\\wwwroot\\css\\site.css",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAATAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-17T14:03:08.897Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T14:03:08.897Z"
             },
             {
               "$type": "Document",
@@ -318,8 +305,7 @@
               "RelativeToolTip": "Skapiec\\Skapiec.csproj",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-14T20:22:16.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T20:22:16.475Z"
             },
             {
               "$type": "Document",
@@ -331,8 +317,7 @@
               "RelativeToolTip": "Skapiec\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-14T20:15:56.736Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T20:15:56.736Z"
             },
             {
               "$type": "Document",
@@ -344,8 +329,7 @@
               "RelativeToolTip": "Skapiec\\Views\\_ViewImports.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-17T01:37:51.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T01:37:51.67Z"
             },
             {
               "$type": "Document",
@@ -357,8 +341,7 @@
               "RelativeToolTip": "Skapiec\\Views\\Home\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAIBJwBIAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-07T18:33:23.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-07T18:33:23.636Z"
             },
             {
               "$type": "Document",
@@ -370,8 +353,7 @@
               "RelativeToolTip": "Skapiec\\Views\\Scrap\\Search.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-02T18:42:55.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-02T18:42:55.849Z"
             },
             {
               "$type": "Document",
@@ -383,8 +365,7 @@
               "RelativeToolTip": "Skapiec\\Views\\_ViewStart.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-17T02:30:44.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T02:30:44.403Z"
             },
             {
               "$type": "Document",
@@ -396,8 +377,7 @@
               "RelativeToolTip": "Skapiec\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-16T11:14:37.625Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-16T11:14:37.625Z"
             },
             {
               "$type": "Document",
@@ -409,8 +389,7 @@
               "RelativeToolTip": "Skapiec\\appsettings.Development.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-17T01:02:30.31Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-17T01:02:30.31Z"
             },
             {
               "$type": "Document",
@@ -444,8 +423,7 @@
               "RelativeToolTip": "Skapiec\\Views\\Shared\\Error.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-16T11:14:21.865Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-16T11:14:21.865Z"
             }
           ]
         }

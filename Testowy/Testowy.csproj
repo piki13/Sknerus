@@ -10,6 +10,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Test.html" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Test.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.3" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
