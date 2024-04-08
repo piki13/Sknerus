@@ -11,6 +11,7 @@ namespace Skapiec.Services
     {
 
         private readonly SkapiecDBcontext dBcontext;
+        private int _counter = 0;
 
         public ScraperService(SkapiecDBcontext dBcontext)
         {
@@ -22,44 +23,8 @@ namespace Skapiec.Services
         {
             using (HttpClient client = new HttpClient())
             {
-                //1 solution
-                /*
-                //Custom query (working :) )
-                string url = $"https://www.skapiec.pl/szukaj?query=.{viewModel.name}";
-                //Get page content
-                string htmlContent = await client.GetStringAsync(url);
-
-                //Create HTML object
-                HtmlDocument htmlDocument = new HtmlDocument();
-                htmlDocument.LoadHtml(htmlContent);
-
-                //scraping
-                var results = htmlDocument.DocumentNode.SelectNodes("//a[@href]");
-                if (results != null)
-                {
-                    foreach (var result in results)
-                    {
-                        //Console.WriteLine(result.Attributes["href"].Value);
-                    }
-                }*/
-
-
-                //2 solution
-                /*
-                string url = $"https://www.skapiec.pl/szukaj?query=.{viewModel.name}";
-                var web = new HtmlWeb();
-                var document = web.Load(url);
-
-                var results = document.QuerySelectorAll("a");
-                foreach (var result in results)
-                {
-                    //Console.WriteLine(result.Attributes["href"].Value);
-                    Console.WriteLine(result.Attributes["href"].Value);
-                }*/
-
-                //3 solution
-
-                string url = $"https://www.skapiec.pl/szukaj?query={viewModel.Name}";
+                //https://www.skapiec.pl/szukaj?query=rower&page=2
+                string url = $"https://www.skapiec.pl/szukaj?query={viewModel.Name}&page={viewModel.PageNumber}";
                 string htmlContent = await client.GetStringAsync(url);
                 HtmlDocument htmlDocument = new HtmlDocument();
                 htmlDocument.LoadHtml(htmlContent);
@@ -68,35 +33,43 @@ namespace Skapiec.Services
 
                 var productsFromDb = await dBcontext.Products.ToListAsync();
 
-                for (int i = 1; i <= 20; i++)
+                if (products != null && viewModel.Name != null)
                 {
-                    var processedProduct = products.SelectSingleNode("div[" + i + "]");
-                    var porcessedProductName = processedProduct.SelectSingleNode("div/a").Attributes["Aria-label"].Value;
-                    var processedProductPrice = processedProduct.SelectSingleNode("div/div/div[3]/span[1]").InnerText;
-                    var processeProductLink = processedProduct.SelectSingleNode("div/a").Attributes["href"].Value;
-                    var processedImgUrl = processedProduct.SelectSingleNode("div/div/div/div/img").Attributes["src"].Value;
-                    var querytoprocess = viewModel.Name;
-
-
-                    char[] totrim = { 'z', 'ł' };
-
-                    double converterdprice = Convert.ToDouble(processedProductPrice.Trim(totrim));
-                    Console.WriteLine(processedImgUrl + " ");
-                    Console.WriteLine(converterdprice + "\n");
-
-                    foreach (var pro in productsFromDb)
+                    for (int i = 1; i <= 20; i++)
                     {
-                        if (pro.Name == porcessedProductName)
+                        var processedProduct = products.SelectSingleNode("div[" + i + "]");
+                        if (processedProduct == null)
                         {
-                            dBcontext.Products.Remove(pro);
+                            break;
                         }
-                    }
-                
+                        string porcessedProductName = processedProduct.SelectSingleNode("div/a").Attributes["Aria-label"].Value;
+                        string processedProductPrice = processedProduct.SelectSingleNode("div/div/div[3]/span[1]").InnerText;
+                        string processedProductLink = processedProduct.SelectSingleNode("div/a").Attributes["href"].Value;
+                        string processedImgUrl = processedProduct.SelectSingleNode("div/div/div/div/img").Attributes["src"].Value;
+                        string querytoprocess = viewModel.Name;
+
+                        if (processedProductLink.StartsWith('/'))
+                        {
+                            processedProductLink = "https://www.skapiec.pl" + processedProductLink;
+                        }
+
+
+                        char[] totrim = { 'z', 'ł' };
+                        double converterdprice = Convert.ToDouble(processedProductPrice.Trim(totrim));
+
+                        foreach (var pro in productsFromDb)
+                        {
+                            if (pro.Name == porcessedProductName)
+                            {
+                                dBcontext.Products.Remove(pro);
+                            }
+                        }
+
                         var product = new Product
                         {
                             Name = porcessedProductName,
                             Value = converterdprice,
-                            Link = processeProductLink,
+                            Link = processedProductLink,
                             ImgUrl = processedImgUrl,
                             CreationTime = DateTime.Now,
                             query = querytoprocess
@@ -104,17 +77,24 @@ namespace Skapiec.Services
 
                         await dBcontext.Products.AddAsync(product);
                         await dBcontext.SaveChangesAsync();
-                    
-                    
+
+
+                    }
+                    var resultsFromDb = await dBcontext.Products
+                        .Where(p => p.query == viewModel.Name).ToListAsync();
+                    ViewBag.Products = resultsFromDb;
+                    _counter = viewModel.PageNumber + 1;
                 }
+
             }
+            var myModel = new SearchViewModel
+            {
+                Name = viewModel.Name,
+                PageNumber = _counter
+            };
 
-            var resultsFromDb = await dBcontext.Products
-                .Where(p => p.query == viewModel.Name)
-                .ToListAsync();
-            ViewBag.Products = resultsFromDb;
 
-            return View();
+            return View(myModel);
         }
     }
 }

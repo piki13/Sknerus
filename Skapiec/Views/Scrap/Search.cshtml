@@ -1,5 +1,6 @@
 ﻿
 @{
+    int counter = 0;
 }
 
 @model Skapiec.Models.SearchViewModel
@@ -8,15 +9,24 @@
 
 <form method="post">
     <input type="text" class="form-control" placeholder="Chcę znaleźć:" asp-for="Name" />
+    <input type="number" style="display: none" value="1" asp-for="PageNumber" />
     <button type="submit" class="btn btn-primary">Znajdź</button>
 </form>
 
+
+
 @if (ViewBag.Products != null)
 {
+    <form method="post">
+        <input type="text" style="display: none" value="@Model.Name" class="form-control" asp-for="Name" />
+        <input type="number" style="display: none" alue="@Model.PageNumber" asp-for="PageNumber" />
+        <button type="submit" class="btn btn-primary">@Model.Name : Strona @Model.PageNumber</button>
+    </form>
     <h2>Znalezione produkty:</h2>
     <table class="table">
         <thead>
             <tr>
+                <th>Nr.</th>
                 <th>Obrazek</th>
                 <th>Nazwa</th>
                 <th>Cena</th>
@@ -26,7 +36,9 @@
         <tbody>
             @foreach (var product in ViewBag.Products)
             {
+                counter++;
                 <tr>
+                    <td>@counter</td>
                     <td><img src="@product.ImgUrl" alt="Product Image" style="width:100px;height:100px;"></td>
                     <td>@product.Name</td>
                     <td>@product.Value</td>
