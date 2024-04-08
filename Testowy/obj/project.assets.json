@@ -4222,11 +4222,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\Testowy.csproj",
+      "projectUniqueName": "C:\\Users\\Tomek\\source\\repos\\Sknerus1\\Testowy\\Testowy.csproj",
       "projectName": "Testowy",
-      "projectPath": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\Testowy.csproj",
+      "projectPath": "C:\\Users\\Tomek\\source\\repos\\Sknerus1\\Testowy\\Testowy.csproj",
       "packagesPath": "C:\\Users\\Tomek\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\obj\\",
+      "outputPath": "C:\\Users\\Tomek\\source\\repos\\Sknerus1\\Testowy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4248,8 +4248,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Skapiec.csproj": {
-              "projectPath": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Skapiec\\Skapiec.csproj"
+            "C:\\Users\\Tomek\\source\\repos\\Sknerus1\\Skapiec\\Skapiec.csproj": {
+              "projectPath": "C:\\Users\\Tomek\\source\\repos\\Sknerus1\\Skapiec\\Skapiec.csproj"
             }
           }
         }

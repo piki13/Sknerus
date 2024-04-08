@@ -35,7 +35,7 @@ namespace Testowy
             var actualData = ScraperService.getSingleNode(nodeToTest, "/html/body/div/h1");
             Assert.ThrowsException<ArgumentException>(() => ScraperService.getSingleNode(nodeToTest, null));
         }
-
+        [TestMethod]
         public void ShouldReturnNullWhenElementNotFound()
         {
             HtmlDocument htmlDocument = new HtmlDocument();
@@ -46,6 +46,5 @@ namespace Testowy
             var actualData = ScraperService.getSingleNode(nodeToTest, "/html/body/div/nonexistent_element");
             Assert.IsNull(actualData);
         }
-        //Przetestować dostarczenie do metody nulla jako pierwszy parametr, drugi test dostarczenie nulla jako drugi parametr trzeci proba wyszukania czegos czego nie ma w dokumencie
     }
 }

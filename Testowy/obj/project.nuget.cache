@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GcBRFDmkj0/dS2JgrvLrDf5hl82+jlI+1Mv0sZocRYQHCZNPBd28TRx32qEtCZZAYAksqEoe4TjFTTZn1aF8AQ==",
+  "dgSpecHash": "rIlRly7vjXva8q3chPOrSC3x4BiGUQ/ocHPen0PYzPlNr05fd41AL4OjXCDvcft656H332J+FIw4QWte0C1dsA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tomek\\source\\repos\\Sknerus\\Testowy\\Testowy.csproj",
+  "projectFilePath": "C:\\Users\\Tomek\\source\\repos\\Sknerus1\\Testowy\\Testowy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tomek\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\Tomek\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
