@@ -1,74 +1,65 @@
-﻿using System.Diagnostics;
-using Skapiec.Models;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Skapiec.Entities;
+using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Skapiec.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-        private readonly SkapiecDBcontext dBcontext;
+        private readonly SkapiecDBcontext _dbcontext;
 
-        public HomeController(SkapiecDBcontext dbContext, ILogger<HomeController> logger)
+        public HomeController(SkapiecDBcontext dbcontext)
         {
-            dBcontext = dbContext;
-            _logger = logger;
+            _dbcontext = dbcontext;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index(string query, string sortBy)
         {
-            var AllproductsFromDb = await dBcontext.Products.ToListAsync();
+            IQueryable<Product> productsQuery = _dbcontext.Products;
 
-            ViewBag.Products = AllproductsFromDb;
-            return View(); // Przekieruj do widoku QueryResults.cshtml
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Index(string queryColumn, string sortOrder)
-        {
-            var AllproductsFromDb = await dBcontext.Products.ToListAsync();
-            var productsFromDb = await dBcontext.Products
-                                                .Where(p => p.query == queryColumn)
-                                                .ToListAsync();
-
-            // Sortowanie
-            switch (sortOrder)
+            if (!string.IsNullOrEmpty(query))
             {
-                case "NameDesc":
-                    productsFromDb = productsFromDb.OrderByDescending(p => p.Name).ToList();
+                productsQuery = productsQuery.Where(p => p.query == query);
+            }
+
+            switch (sortBy)
+            {
+                case "Name_ASC":
+                    productsQuery = productsQuery.OrderBy(p => p.Name);
                     break;
-                case "PriceAsc":
-                    productsFromDb = productsFromDb.OrderBy(p => p.Value).ToList();
+                case "Name_DESC":
+                    productsQuery = productsQuery.OrderByDescending(p => p.Name);
                     break;
-                case "PriceDesc":
-                    productsFromDb = productsFromDb.OrderByDescending(p => p.Value).ToList();
+                case "Value_ASC":
+                    productsQuery = productsQuery.OrderBy(p => p.Value);
                     break;
-                case "DateAsc":
-                    productsFromDb = productsFromDb.OrderBy(p => p.CreationTime).ToList();
+                case "Value_DESC":
+                    productsQuery = productsQuery.OrderByDescending(p => p.Value);
                     break;
-                case "DateDesc":
-                    productsFromDb = productsFromDb.OrderByDescending(p => p.CreationTime).ToList();
+                case "CreationTime_ASC":
+                    productsQuery = productsQuery.OrderBy(p => p.CreationTime);
+                    break;
+                case "CreationTime_DESC":
+                    productsQuery = productsQuery.OrderByDescending(p => p.CreationTime);
                     break;
                 default:
-                    
-                    productsFromDb = productsFromDb.OrderBy(p => p.Name).ToList();
+                    productsQuery = productsQuery.OrderBy(p => p.Id);
                     break;
             }
 
-            ViewBag.Products = AllproductsFromDb;
-            ViewBag.Selected = productsFromDb;
-            ViewBag.SortOrder = sortOrder; // Przekazanie informacji o aktualnym sposobie sortowania do widoku
-            return View("Index", productsFromDb); // Przekieruj do widoku Index.cshtml z wynikami zapytania
-        }
+            var products = productsQuery.ToList();
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            if (Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return PartialView("_ProductTablePartial", products);
+            }
+            else
+            {
+                return View(products);
+            }
         }
     }
 }

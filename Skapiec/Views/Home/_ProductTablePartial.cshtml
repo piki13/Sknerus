@@ -1,0 +1,23 @@
+﻿@model List<Skapiec.Entities.Product>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nazwa</th>
+            <th>Cena</th>
+            <th>Data dodania</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Value</td>
+                <td>@product.CreationTime</td>
+            </tr>
+        }
+    </tbody>
+</table>

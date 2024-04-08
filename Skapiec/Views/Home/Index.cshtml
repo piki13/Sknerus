@@ -1,67 +1,53 @@
-﻿@model IEnumerable<Skapiec.Entities.Product>
+﻿@model List<Skapiec.Entities.Product>
 
-@{
-    ViewData["Title"] = "Historia";
-}
+<h1>Historia produktów</h1>
 
-<h1>Historia</h1>
+<label for="query">Wybierz zapytanie:</label>
+<select id="query">
+    <option value="">Wybierz zapytanie</option>
+    @foreach (var product in Model.Select(p => p.query).Distinct())
+    {
+        <option value="@product">@product</option>
+    }
+</select>
 
-<form method="post" asp-action="Index" id="searchForm">
-    <div class="form-group">
-        <label for="queryColumn">Wybierz wyszukiwanie z listy:</label>
-        <select class="form-control" id="queryColumn" name="queryColumn" onchange="document.getElementById('searchForm').submit()">
-            @{
-                var selectedQueries = new List<string>();
-                foreach (var product in ViewBag.Products)
-                {
-                    if (!selectedQueries.Contains(product.query))
-                    {
-                        <option value="@product.query">@product.query</option>
-                        selectedQueries.Add(product.query);
+<label for="sortBy">Sortuj wg:</label>
+<select id="sortBy">
+    <option value="">Wybierz sposób sortowania</option>
+    <option value="Name_ASC">Nazwa rosnąco</option>
+    <option value="Name_DESC">Nazwa malejąco</option>
+    <option value="Value_ASC">Cena rosnąco</option>
+    <option value="Value_DESC">Cena malejąco</option>
+    <option value="CreationTime_ASC">Data dodania rosnąco</option>
+    <option value="CreationTime_DESC">Data dodania malejąco</option>
+</select>
+
+<div id="productTablePartial">
+    @Html.Partial("_ProductTablePartial", Model)
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#query, #sortBy').change(function () {
+                var query = $('#query').val();
+                var sortBy = $('#sortBy').val();
+
+                $.ajax({
+                    url: '/Home/Index',
+                    type: 'GET',
+                    data: {
+                        query: query,
+                        sortBy: sortBy
+                    },
+                    success: function (data) {
+                        $('#productTablePartial').html(data);
+                    },
+                    error: function () {
+                        console.log('Błąd pobierania danych.');
                     }
-                }
-            }
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="sortOrder">Sortowanie:</label>
-        <select class="form-control" id="sortOrder" name="sortOrder" onchange="document.getElementById('searchForm').submit()">
-            <option value="NameAsc">Nazwa (rosnąco)</option>
-            <option value="NameDesc">Nazwa (malejąco)</option>
-            <option value="PriceAsc">Cena (rosnąco)</option>
-            <option value="PriceDesc">Cena (malejąco)</option>
-            <option value="DateAsc">Data (rosnąco)</option>
-            <option value="DateDesc">Data (malejąco)</option>
-      
-        </select>
-    </div>
-</form>
-
-@if (Model != null && Model.Any())
-{
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Obrazek</th>
-                <th>Nazwa</th>
-                <th>Cena</th>
-                <th>Link</th>
-                <th>
-                    Data
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var product in Model)
-            {
-                <tr>
-                    <td><img src="@product.ImgUrl" alt="Product Image" style="width:100px;height:100px;"></td>
-                    <td>@product.Name</td>
-                    <td>@product.Value</td>
-                    <td><a href="@product.Link">Link</a></td>
-                    <td>@product.CreationTime.ToString("yyyy-MM-dd HH:mm")</td>
-                </tr>
-            }
-        </tbody>
-    </table>
+                });
+            });
+        });
+    </script>
 }
