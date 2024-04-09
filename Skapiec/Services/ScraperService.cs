@@ -85,6 +85,10 @@ namespace Skapiec.Services
                     ViewBag.Products = resultsFromDb;
                     _counter = viewModel.PageNumber + 1;
                 }
+                else
+                {
+                    return View("Error");
+                }
 
             }
             var myModel = new SearchViewModel

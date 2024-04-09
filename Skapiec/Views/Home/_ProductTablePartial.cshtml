@@ -3,10 +3,12 @@
 <table class="table">
     <thead>
         <tr>
-            <th>#</th>
+            <th>Id</th>
+            <th>Obrazek</th>
             <th>Nazwa</th>
             <th>Cena</th>
             <th>Data dodania</th>
+            <th>Link</th>
         </tr>
     </thead>
     <tbody>
@@ -14,9 +16,11 @@
         {
             <tr>
                 <td>@product.Id</td>
+                <td><img src="@product.ImgUrl" alt="Product Image" style="width:100px;height:100px;"></td>
                 <td>@product.Name</td>
                 <td>@product.Value</td>
                 <td>@product.CreationTime</td>
+                <td><a href="@product.Link">Link</a></td>
             </tr>
         }
     </tbody>
