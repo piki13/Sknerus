@@ -3,7 +3,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>Id</th>
             <th>Obrazek</th>
             <th>Nazwa</th>
             <th>Cena</th>
@@ -15,7 +14,6 @@
         @foreach (var product in Model)
         {
             <tr>
-                <td>@product.Id</td>
                 <td><img src="@product.ImgUrl" alt="Product Image" style="width:100px;height:100px;"></td>
                 <td>@product.Name</td>
                 <td>@product.Value</td>
