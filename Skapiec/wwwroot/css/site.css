@@ -46,3 +46,27 @@ header {
     background-color: #7A6AA8;
     height: 20%;
 }
+
+
+
+.navbar-nav.custom-buttons > .nav-item {
+    margin-right: 15px;
+}
+
+    .navbar-nav.custom-buttons > .nav-item:last-child {
+        margin-right: 0; 
+    }
+
+.custom-button {
+    background-color: #EED920;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+    .custom-button:hover {
+        background-color: #FFD700;
+    }
